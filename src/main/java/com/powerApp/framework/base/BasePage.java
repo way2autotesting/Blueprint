@@ -1,11 +1,14 @@
 package com.powerApp.framework.base;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 
 /**
  * Created by Ibi on 15/12/2022.
  */
 public class BasePage extends Base{
+
+    protected static String worldwideRandomNumber;
 
     public <TPage extends BasePage> TPage As(Class<TPage> pageInstance) {
 
@@ -15,6 +18,14 @@ public class BasePage extends Base{
             e.getStackTrace();
         }
         return null;
+    }
+
+    protected String getRandomString(){
+
+        int length = 7;
+        boolean useLetters = true;
+        boolean useNumbers = true;
+        return RandomStringUtils.random(length, useLetters, useNumbers);
     }
 
     public enum ElementStatus{

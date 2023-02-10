@@ -20,6 +20,13 @@ public class MicrosoftStaySignedPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//div[(@id='idDiv_SAOTCS_Proofs_Section')]/child::div/child::div/child::div/child::div/child::div/following-sibling::div/child::div")
     private WebElement VerifyYourIdentityText;
 
+
+    public SharePointRequestPortalPage ClickYesButton3(){
+
+        DriverContext.WaitForElementToBeClickable(MicrosoftStaySignedPageYesButton);
+        return GetInstance(SharePointRequestPortalPage.class);
+    }
+
     public PowerApp ClickYesButton2(){
 
         DriverContext.WaitForElementToBeClickable(MicrosoftStaySignedPageYesButton);

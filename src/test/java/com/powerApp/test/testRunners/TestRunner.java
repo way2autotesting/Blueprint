@@ -37,7 +37,7 @@ public class TestRunner {
             //pass the hardcoded scenario name
             CucumberTagStatement scenarioName = element.next(); //give list of all scenario name
             //if (!scenarioName.getVisualName().equals("Scenario: Check Login with correct username and password")) {
-            if (!scenarioName.getVisualName().contains("Scenario:") && !scenarioName.getVisualName().contains("Scenario Outline:")) {
+            if (!scenarioName.getVisualName().contains("Scenario:") && !scenarioName.getVisualName().contains("Scenario")) {
                 element.remove();
             }
         }

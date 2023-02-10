@@ -5,7 +5,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.*;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -18,7 +17,8 @@ public class DriverContext {
 
     private static Select select;
     private static WebElement element;
-    private static String parent;
+    public static String parent;
+
 
     public static void GoToUrl(String url) {  //try to remove
 
@@ -231,8 +231,15 @@ public class DriverContext {
      * @param locator
      */
     public static void WaitForElementToBeClickable(WebElement locator) {
-        WebDriverWait wait = new WebDriverWait(LocalDriverContext.getRemoteWebDriver(), 60);
+        WebDriverWait wait = new WebDriverWait(LocalDriverContext.getRemoteWebDriver(), 120);
         wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+        WaitForPageToLoad();
+        Settings.logs.Write("Wait for element to be clickable");
+    }
+
+    public static void WaitForElementToBePresenceLocated(WebElement locator) {
+        WebDriverWait wait = new WebDriverWait(LocalDriverContext.getRemoteWebDriver(), 60);
+        wait.until(ExpectedConditions.presenceOfElementLocated((By) locator));
         WaitForPageToLoad();
         Settings.logs.Write("Wait for element to be clickable");
     }
@@ -308,27 +315,106 @@ public class DriverContext {
         keyDown.sendKeys(Keys.chord(Keys.DOWN, Keys.DOWN, Keys.ENTER)).perform();
     }
 
-    public static void WindowHandling() {
+    public static String GetCurrentWindow() {
+
+        return parent = LocalDriverContext.getRemoteWebDriver().getWindowHandle();
+    }
+
+    public static void WindowHandling() throws InterruptedException {
 
         // It will return the parent window name as a String
-        parent = LocalDriverContext.getRemoteWebDriver().getWindowHandle();
-        Set<String> s = LocalDriverContext.getRemoteWebDriver().getWindowHandles();
+        //parent = LocalDriverContext.getRemoteWebDriver().getWindowHandle();
+        Set<String> allWindows = LocalDriverContext.getRemoteWebDriver().getWindowHandles();
 
-        // Now iterate using Iterator
-        Iterator<String> I1 = s.iterator();
-
-        while (I1.hasNext()) {
-
-            String child_window = I1.next();
-
-            if (!parent.equals(child_window)) {
-                LocalDriverContext.getRemoteWebDriver().switchTo().window(child_window);
-
-                DriverContext.WaitForPageToLoad();
-                //System.out.println(LocalDriverContext.getRemoteWebDriver().switchTo().window(child_window).getTitle());
-
-                //LocalDriverContext.getRemoteWebDriver().close();
+        for (String curWindow : allWindows) {
+            if (!parent.equals(curWindow)) {
+                LocalDriverContext.getRemoteWebDriver().switchTo().window(curWindow);
+                Thread.sleep(500);
+                System.out.println("switch to powerApp url "+LocalDriverContext.getRemoteWebDriver().getCurrentUrl());
             }
         }
+    }
+
+    // Switch back to main web page
+    public static void SwitchFrameToDefault(){
+
+        LocalDriverContext.getRemoteWebDriver().switchTo().defaultContent();
+    }
+
+    public static void SwitchFrame(int value) throws InterruptedException {
+
+        Thread.sleep(7000);
+        SwitchFrameToDefault();
+        int count = LocalDriverContext.getRemoteWebDriver().findElements(By.tagName("iframe")).size() ;
+        if(count == 0){
+            // No frames
+        }else{
+            List<WebElement> NameOfFrame = LocalDriverContext.getRemoteWebDriver().findElements(By.tagName("iframe"));
+            for(WebElement s : NameOfFrame){
+
+                //System.out.println("List of frames is : "+s.getText());
+            }
+            // Frames present
+        }
+        LocalDriverContext.getRemoteWebDriver().switchTo().frame(value);
+    }
+
+    public static void SwitchFrame(String value){
+
+        LocalDriverContext.getRemoteWebDriver().switchTo().frame(value);
+    }
+
+    public static void DoubleClick(WebElement ele){
+
+        Actions actions = new Actions(LocalDriverContext.getRemoteWebDriver());
+        WebElement elementLocator = ele;
+        actions.doubleClick(elementLocator).perform();
+    }
+
+    public static void WaitForElementNotGettingToBeClickable(WebElement locator) {
+        WebElement myelement = locator;
+        JavascriptExecutor jse2 = (JavascriptExecutor)LocalDriverContext.getRemoteWebDriver();
+        jse2.executeScript("arguments[0].scrollIntoView()", myelement);
+    }
+     private static String strV = "#appRoot > div.Files.sp-App-root.has-footer.sp-App-rigtPane-expanded.is-active.od-userSelect--enabled.sp-WebViewList-enable.sp-fullHeightLayouts > div.sp-App-bodyContainer > div.sp-App-body > div > div.Files-main > div.Files-mainColumn > div.Files-contentAreaFlexContainer.shy-suiteNav > div.Files-rightPaneInteractionContainer > div.Files-rightPanePushedContainer > div > div > div > div > div";
+    public static void ScrollToTheRight(WebElement locator) {
+        WebElement myelement = locator;
+        JavascriptExecutor jse2 = (JavascriptExecutor)LocalDriverContext.getRemoteWebDriver();
+       // jse2.executeScript("arguments[0].scrollLeft = arguments[0].offsetWidth", myelement);   //arguments[0].scrollLeft += 250
+        jse2.executeScript( "document.getElementsByClassName('od-ItemsScopeList-page').scrollLeft += 250", myelement);
+    }
+
+    public static void ScrollToTheLeft(int degree) throws InterruptedException {
+        JavascriptExecutor jse2 = (JavascriptExecutor)LocalDriverContext.getRemoteWebDriver();
+        Thread.sleep(2000);
+        jse2.executeScript( "document.getElementsByClassName('od-ItemsScopeList-page').scrollLeft += 300");
+        //jse2.executeScript("document.querySelector("+strV+").scrollLeft=0");
+        //jse2.executeScript("document.querySelector("+strV+").scrollLeft=300");
+
+        //jse2.executeScript("document.querySelector(\"#appRoot > div.Files.sp-App-root.has-footer.sp-App-rigtPane-expanded.is-active.od-userSelect--enabled.sp-WebViewList-enable.sp-fullHeightLayouts > div.sp-App-bodyContainer > div.sp-App-body > div > div.Files-main > div.Files-mainColumn > div.Files-contentAreaFlexContainer.shy-suiteNav > div.Files-rightPaneInteractionContainer > div.Files-rightPanePushedContainer > div > div > div > div > div\").scrollLeft=0");
+        //jse2.executeScript("document.querySelector(\"#appRoot > div.Files.sp-App-root.has-footer.sp-App-rigtPane-expanded.is-active.od-userSelect--enabled.sp-WebViewList-enable.sp-fullHeightLayouts > div.sp-App-bodyContainer > div.sp-App-body > div > div.Files-main > div.Files-mainColumn > div.Files-contentAreaFlexContainer.shy-suiteNav > div.Files-rightPaneInteractionContainer > div.Files-rightPanePushedContainer > div > div > div > div > div\").scrollLeft=300");   //arguments[0].scrollLeft += 250
+        //jse2.executeScript( "document.querySelector(\"#appRoot > div.Files.sp-App-root.has-footer.sp-App-rigtPane-expanded.is-active.od-userSelect--enabled.sp-WebViewList-enable.sp-fullHeightLayouts > div.sp-App-bodyContainer > div.sp-App-body > div > div.Files-main > div.Files-mainColumn > div.Files-contentAreaFlexContainer.shy-suiteNav > div.Files-rightPaneInteractionContainer > div.Files-rightPanePushedContainer > div > div > div > div > div\").scrollLeft="+degree+"");
+    }
+
+    public static void ScrollToTheLeft2(int degree) throws InterruptedException {
+        JavascriptExecutor jse2 = (JavascriptExecutor)LocalDriverContext.getRemoteWebDriver();
+        Thread.sleep(2000);
+        jse2.executeScript( "document.getElementsByClassName('od-ItemsScopeList-page').scrollLeft += 0");
+        Thread.sleep(2000);
+        jse2.executeScript( "document.getElementsByClassName('od-ItemsScopeList-page').scrollLeft += 2000");
+        //jse2.executeScript("document.querySelector(\"\n#appRoot > div.Files.sp-App-root.has-footer.sp-App-rigtPane-expanded.is-active.od-userSelect--enabled.sp-WebViewList-enable.sp-fullHeightLayouts > div.sp-App-bodyContainer > div.sp-App-body > div > div.Files-main > div.Files-mainColumn > div.Files-contentAreaFlexContainer.shy-suiteNav > div.Files-rightPaneInteractionContainer > div.Files-rightPanePushedContainer > div > div > div > div > div\n\").scrollLeft=0");
+        //jse2.executeScript("document.querySelector(\"\n#appRoot > div.Files.sp-App-root.has-footer.sp-App-rigtPane-expanded.is-active.od-userSelect--enabled.sp-WebViewList-enable.sp-fullHeightLayouts > div.sp-App-bodyContainer > div.sp-App-body > div > div.Files-main > div.Files-mainColumn > div.Files-contentAreaFlexContainer.shy-suiteNav > div.Files-rightPaneInteractionContainer > div.Files-rightPanePushedContainer > div > div > div > div > div\n\").scrollLeft=2000");   //arguments[0].scrollLeft += 250
+        //jse2.executeScript( "document.querySelector(\"#appRoot > div.Files.sp-App-root.has-footer.sp-App-rigtPane-expanded.is-active.od-userSelect--enabled.sp-WebViewList-enable.sp-fullHeightLayouts > div.sp-App-bodyContainer > div.sp-App-body > div > div.Files-main > div.Files-mainColumn > div.Files-contentAreaFlexContainer.shy-suiteNav > div.Files-rightPaneInteractionContainer > div.Files-rightPanePushedContainer > div > div > div > div > div\").scrollLeft="+degree+"");
+    }
+
+    public static void ScrollToTheLeft3(int degree) throws InterruptedException {
+        JavascriptExecutor jse2 = (JavascriptExecutor)LocalDriverContext.getRemoteWebDriver();
+        Thread.sleep(2000);
+        jse2.executeScript( "document.getElementsByClassName('od-ItemsScopeList-page').scrollLeft += 0");
+        Thread.sleep(2000);
+        jse2.executeScript( "document.getElementsByClassName('od-ItemsScopeList-page').scrollLeft += 3500");
+        //jse2.executeScript("document.querySelector(\"#appRoot > div.Files.sp-App-root.has-footer.sp-App-rigtPane-expanded.is-active.od-userSelect--enabled.sp-WebViewList-enable.sp-fullHeightLayouts > div.sp-App-bodyContainer > div.sp-App-body > div > div.Files-main > div.Files-mainColumn > div.Files-contentAreaFlexContainer.shy-suiteNav > div.Files-rightPaneInteractionContainer > div.Files-rightPanePushedContainer > div > div > div > div > div\").scrollLeft=0");
+        //jse2.executeScript("document.querySelector(\"#appRoot > div.Files.sp-App-root.has-footer.sp-App-rigtPane-expanded.is-active.od-userSelect--enabled.sp-WebViewList-enable.sp-fullHeightLayouts > div.sp-App-bodyContainer > div.sp-App-body > div > div.Files-main > div.Files-mainColumn > div.Files-contentAreaFlexContainer.shy-suiteNav > div.Files-rightPaneInteractionContainer > div.Files-rightPanePushedContainer > div > div > div > div > div\").scrollLeft=3500");   //arguments[0].scrollLeft += 250
+        //jse2.executeScript( "document.querySelector(\"#appRoot > div.Files.sp-App-root.has-footer.sp-App-rigtPane-expanded.is-active.od-userSelect--enabled.sp-WebViewList-enable.sp-fullHeightLayouts > div.sp-App-bodyContainer > div.sp-App-body > div > div.Files-main > div.Files-mainColumn > div.Files-contentAreaFlexContainer.shy-suiteNav > div.Files-rightPaneInteractionContainer > div.Files-rightPanePushedContainer > div > div > div > div > div\").scrollLeft="+degree+"");
     }
 }
