@@ -5,67 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa804080-1416-44ce-8844-8d5e580c4431" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_12_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_12_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_12_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_12_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_googlecode_owasp_java_html_sanitizer_owasp_java_html_sanitizer_20211018_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_10_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_masterthought_cucumber_reporting_5_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_velocity_velocity_engine_core_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_beanshell_bsh_2_0b4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_plexus_plexus_utils_3_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_14_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_9_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/powerApp/test/pages/PowerAppActivityPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/powerApp/test/pages/PowerAppAddUsersToSiteOwnersPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/powerApp/test/pages/PowerAppOwnershipPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/powerApp/test/pages/PowerAppRetentionPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/powerApp/test/pages/PowerAppSecurityPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/powerApp/test/pages/PowerAppSuccessfulPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/powerApp/test/pages/PowerAppSummaryPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/powerApp/test/testRunners/CucumberRun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_72.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_48.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_5_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_23_6_jre.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_30_1_1_jre.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_extras_beanshell_bsh_2_0b6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_9_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_14_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blueprint.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Blueprint.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/powerApp/framework/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/powerApp/framework/base/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/powerApp/framework/base/DriverContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/powerApp/framework/base/DriverContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/powerApp/framework/config/GlobalConfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/powerApp/framework/config/GlobalConfig.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/powerApp/test/features/IssueTaxonomyChanges.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/powerApp/test/features/IssueTaxonomyChanges.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/powerApp/framework/base/FrameworkInitialize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/powerApp/framework/base/FrameworkInitialize.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/powerApp/test/features/Smoke.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/powerApp/test/features/Smoke.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/powerApp/test/pages/MicrosoftStaySignedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/powerApp/test/pages/MicrosoftStaySignedPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/powerApp/test/pages/PowerAppIntroductionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/powerApp/test/pages/PowerAppIntroductionPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/powerApp/test/pages/PowerAppRetentionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/powerApp/test/pages/PowerAppRetentionPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/powerApp/test/stepdefs/IssueTaxonomyChangesStepdef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/powerApp/test/stepdefs/IssueTaxonomyChangesStepdef.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/powerApp/test/stepdefs/SmokeStepdef.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/powerApp/test/stepdefs/SmokeStepdef.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/powerApp/test/testRunners/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/powerApp/test/testRunners/TestRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/powerApp/framework/base/BasePage$ElementStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/powerApp/framework/base/BasePage$ElementStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/powerApp/framework/base/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/powerApp/framework/base/BasePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/powerApp/framework/base/DriverContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/powerApp/framework/base/DriverContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/powerApp/test/pages/MicrosoftStaySignedPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/powerApp/test/pages/MicrosoftStaySignedPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/powerApp/test/pages/PowerAppIntroductionPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/powerApp/test/pages/PowerAppIntroductionPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/powerApp/framework/base/FrameworkInitialize.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/powerApp/framework/base/FrameworkInitialize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/powerApp/test/pages/PowerAppRetentionPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/powerApp/test/pages/PowerAppRetentionPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/powerApp/test/stepdefs/IssueTaxonomyChangesStepdef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/powerApp/test/stepdefs/IssueTaxonomyChangesStepdef.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/powerApp/test/stepdefs/SmokeStepdef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/powerApp/test/stepdefs/SmokeStepdef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/powerApp/test/testRunners/TestRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/powerApp/test/testRunners/TestRunner.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -565,13 +514,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Kunle\Documents\Work_Projects\Triad\BEIS\Blueprint\src\main\resources" />
@@ -588,7 +538,7 @@
       <recent name="com.powerApp.test.listeners" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: 1 Smoke test (1)">
+  <component name="RunManager" selected="Cucumber Java.Scenario: 1 Smoke test via Energy supply and security">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -731,11 +681,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: 1 Smoke test" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true">
+    <configuration name="Scenario: 1 Smoke test via Energy supply and security" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/com/powerApp/test/features/Smoke.feature" />
       <option name="GLUE" value="com.powerApp.test.stepdefs" />
       <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="Blueprint" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^1 Smoke test$&quot;" />
+      <option name="NAME_FILTER" value="^1 Smoke test via Energy supply and security$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^1 Smoke test via Energy supply and security$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: 1 Smoke test via Energy supply and security" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: 2 Smoke test via Corporate" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="1.2" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/java/com/powerApp/test/features/Smoke.feature" />
+      <option name="GLUE" value="com.powerApp.test.stepdefs" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="Blueprint" />
+      <option name="NAME_FILTER" value="^2 Smoke test via Corporate$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^2 Smoke test via Corporate$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: 2 Smoke test via Corporate" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="cucumber.api.cli.*" />
@@ -747,21 +720,6 @@
       </method>
     </configuration>
     <configuration name="Scenario: 2 The list of Partner Organisations terms does not include the Group and Directorate administration terms (1)" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true">
-      <option name="GLUE" value="com.powerApp.test.stepdefs" />
-      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
-      <module name="Blueprint" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;^2 The list of Partner Organisations terms does not include the Group and Directorate administration terms$&quot;" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="cucumber.api.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: 2 The list of Partner Organisations terms does not include the Group and Directorate administration terms" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true">
       <option name="GLUE" value="com.powerApp.test.stepdefs" />
       <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
       <module name="Blueprint" />
@@ -830,14 +788,16 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Cucumber Java.Scenario: 1 Smoke test via Energy supply and security" />
+      <item itemvalue="Cucumber Java.Scenario: 2 Smoke test via Corporate" />
       <item itemvalue="Cucumber Java.Scenario: 1 Smoke test (1)" />
-      <item itemvalue="Cucumber Java.Scenario: 1 Smoke test" />
-      <item itemvalue="Cucumber Java.Scenario: 2 The list of Partner Organisations terms does not include the Group and Directorate administration terms" />
       <item itemvalue="Cucumber Java.Scenario: 2 The list of Partner Organisations terms does not include the Group and Directorate administration terms (1)" />
       <item itemvalue="Cucumber Java.Scenario: 3 The list of Corporate terms include 'Commercial'" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: 1 Smoke test via Energy supply and security" />
+        <item itemvalue="Cucumber Java.Scenario: 2 Smoke test via Corporate" />
         <item itemvalue="Cucumber Java.Scenario: 1 Smoke test (1)" />
       </list>
     </recent_temporary>
@@ -932,10 +892,34 @@
           <properties class="com.powerApp.test.pages.SharePointRequestPortalPage" />
           <option name="timeStamp" value="45" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/com/powerApp/test/pages/PowerAppRetentionPage.java</url>
+          <line>149</line>
+          <properties class="com.powerApp.test.pages.PowerAppRetentionPage" method="ITem3SelectedCheckboxOperationOfBEISStatutoryDuties">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/powerApp/test/stepdefs/SmokeStepdef.java</url>
-          <line>217</line>
+          <line>221</line>
           <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/powerApp/test/stepdefs/IssueTaxonomyChangesStepdef.java</url>
+          <line>169</line>
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/powerApp/test/stepdefs/SmokeStepdef.java</url>
+          <line>256</line>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/powerApp/test/stepdefs/IssueTaxonomyChangesStepdef.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

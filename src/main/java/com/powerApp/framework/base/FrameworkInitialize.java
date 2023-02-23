@@ -49,7 +49,7 @@ public class FrameworkInitialize extends Base {
                     break;
                 }
                 case Firefox: {
-                    System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\src\\browser\\geckodriver.exe");
+                    System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\src\\main\\browser\\geckodriver.exe");
                     DesiredCapabilities caps = new DesiredCapabilities().firefox();
                     caps.setBrowserName("firefox");
 

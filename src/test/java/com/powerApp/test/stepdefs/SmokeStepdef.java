@@ -162,6 +162,10 @@ public class SmokeStepdef extends Base {
 
         if(radioButton.equalsIgnoreCase("No")){
             CurrentPage.As(PowerAppRetentionPage.class).ClickNoRadioButtonNationalSignificance();
+        } else if (radioButton.equalsIgnoreCase("Almost certainly")) {
+            CurrentPage.As(PowerAppRetentionPage.class).ClickAlmostCertainlyRadioButtonNationalSignificance();
+        }else if (radioButton.equalsIgnoreCase("Possibly")) {
+            CurrentPage.As(PowerAppRetentionPage.class).ClickPossiblyRadioButtonNationalSignificance();
         }
     }
 
@@ -230,5 +234,40 @@ public class SmokeStepdef extends Base {
         }else if(WorkspaceRequestPortal.equalsIgnoreCase("Workspace Request Portal") && keyStatus.equalsIgnoreCase("Created By")){
             Assert.assertTrue(CurrentPage.As(SharePointRequestPortalPage.class).GetCreatedBy().contains(value));
         }
+    }
+
+    @When("^I click on the activity drop down list$")
+    public void iClickOnTheActivityDropDownList() {
+
+        CurrentPage.As(PowerAppActivityPage.class).SelectWhichActivityDropdown();
+    }
+
+    @And("^I have selected \"([^\"]*)\" from the activities site$")
+    public void iHaveSelectedFromTheActivitiesSite(String activity) throws Throwable {
+
+        CurrentPage.As(PowerAppActivityPage.class).ClickEntryWhichActivityFromDropdown(activity);
+    }
+
+    @And("^I select \"([^\"]*)\" checkbox category for the national significant work$")
+    public void iSelectCheckboxCategoryForTheNationalSignificantWork(String category) throws Throwable {
+
+       // DriverContext.SwitchFrame(0);
+        if(category.equalsIgnoreCase("BEIS's principle policy delivery goals")){
+            Thread.sleep(1000);
+            CurrentPage.As(PowerAppRetentionPage.class).ITem1SelectedCheckboxBEISPrincipalPolicy();
+        } else if (category.equalsIgnoreCase("Development or implementation of legislation (primary and secondary)")) {
+            Thread.sleep(1000);
+            CurrentPage.As(PowerAppRetentionPage.class).ITem2SelectedCheckboxDevelopmentOrImplementationOfLegislation();
+        }else if (category.equalsIgnoreCase("Operation of BEIS's statutory duties")) {
+            Thread.sleep(1000);
+            CurrentPage.As(PowerAppRetentionPage.class).ITem3SelectedCheckboxOperationOfBEISStatutoryDuties();
+        }else if (category.equalsIgnoreCase("High-level decision-making e.g. cabinet committee meetings")) {
+            Thread.sleep(1000);
+            CurrentPage.As(PowerAppRetentionPage.class).ITem4SelectedCheckboxHighLevelDecisionMaking();
+        }else if (category.equalsIgnoreCase("Constitutional matters; devolution")) {
+            Thread.sleep(1000);
+            CurrentPage.As(PowerAppRetentionPage.class).ITem5SelectedCheckboxConstitutionalMatters();
+        }
+
     }
 }

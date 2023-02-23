@@ -31,6 +31,12 @@ public class PowerAppRetentionPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//div[@data-control-name='Radio3_1']/child::div/child::div/child::div/child::div/child::div[position()=3]")
     private WebElement PowerAppPurposePageNationalSignificantNo;
 
+    @FindBy(how = How.XPATH, using = "//div[@data-control-name='Radio3_1']/child::div/child::div/child::div/child::div/child::div[position()=1]")
+    private WebElement PowerAppPurposePageNationalSignificantAlmostCertainly;
+
+    @FindBy(how = How.XPATH, using = "//div[@data-control-name='Radio3_1']/child::div/child::div/child::div/child::div/child::div[position()=2]")
+    private WebElement PowerAppPurposePageNationalSignificantPossibly;
+
     @FindBy(how = How.XPATH, using = "//div[(@data-control-name='Nationally Significant_DataCard1_1')]/child::div/child::div/child::div/child::div[position()=7]/child::div/child::div/child::div/child::div/child::div[position()=3]/child::label/child::input")
     private WebElement PowerAppPurposePageExtendedValueNo;
 
@@ -40,6 +46,23 @@ public class PowerAppRetentionPage extends BasePage {
     @FindBy(how = How.XPATH, using = "//div[@data-control-name='Radio1']/child::div/child::div/child::div/child::div/child::div[position()=3]")
     private WebElement PowerAppPurposePageOrganisationSignificanceNo;
 
+    //@FindBy(how = How.XPATH, using = "//div[@data-control-name='Gallery4_3']/child::div/child::div/child::div/child::div/child::div/following-sibling::div/child::div/child::div/child::div[position()=1]/child::div[contains(text(),'Item 1. Selected.')]")
+    @FindBy(how = How.CSS, using = "#publishedCanvas > div > div:nth-child(2) > div > div > div:nth-child(1) > div > div > div > div > div:nth-child(2) > div > div > div > div > div > div > div > div > div > div > div > div:nth-child(7) > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div:nth-child(2) > div > div > div > div:nth-child(4) > div > div > div > div > div.virtualized-gallery > div > div > div:nth-child(1) > div.canvasContentDiv.container_1vt1y2p > div > div:nth-child(2) > div > div > div > div > label > div.appmagic-checkbox-placeholder > svg > g > rect")
+    private WebElement PowerAppPurposePageNationalSignificantPossiblyCheckboxItemPosition1;
+
+    @FindBy(how = How.XPATH, using = "//div[@data-control-name='Gallery4_3']/child::div/child::div/child::div/child::div/child::div/following-sibling::div/child::div/child::div/child::div[position()=2]/child::div[contains(text(),'Item 2')]")
+    private WebElement PowerAppPurposePageNationalSignificantPossiblyCheckboxItemPosition2;
+
+    //@FindBy(how = How.XPATH, using = "//div[@data-control-name='Gallery4_3']/child::div/child::div/child::div/child::div/child::div/following-sibling::div/child::div/child::div/child::div[position()=3]/child::div[contains(text(),'Item 3')]")
+    @FindBy(how = How.CSS, using = "#publishedCanvas > div > div:nth-child(2) > div > div > div:nth-child(1) > div > div > div > div > div:nth-child(2) > div > div > div > div > div > div > div > div > div > div > div > div:nth-child(7) > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div:nth-child(2) > div > div > div > div:nth-child(4) > div > div > div > div > div.virtualized-gallery > div > div > div:nth-child(3) > div.canvasContentDiv.container_1vt1y2p > div > div:nth-child(2) > div > div > div > div > label > div.appmagic-checkbox-placeholder > svg > g > rect")
+    private WebElement PowerAppPurposePageNationalSignificantPossiblyCheckboxItemPosition3;
+
+    @FindBy(how = How.XPATH, using = "//div[@data-control-name='Gallery4_3']/child::div/child::div/child::div/child::div/child::div/following-sibling::div/child::div/child::div/child::div[position()=4]/child::div[contains(text(),'Item 4')]")
+    private WebElement PowerAppPurposePageNationalSignificantPossiblyCheckboxItemPosition4;
+
+    //@FindBy(how = How.XPATH, using = "//div[@data-control-name='Gallery4_3']/child::div/child::div/child::div/child::div/child::div/following-sibling::div/child::div/child::div/child::div[position()=5]/child::div[contains(text(),'Item 5')]")
+    @FindBy(how = How.CSS, using = "#publishedCanvas > div > div:nth-child(2) > div > div > div:nth-child(1) > div > div > div > div > div:nth-child(2) > div > div > div > div > div > div > div > div > div > div > div > div:nth-child(7) > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div > div:nth-child(2) > div > div > div > div:nth-child(4) > div > div > div > div > div.virtualized-gallery > div > div > div:nth-child(5) > div.canvasContentDiv.container_1vt1y2p > div > div:nth-child(2) > div > div > div > div > label > div.appmagic-checkbox-placeholder > svg > g > rect")
+    private WebElement PowerAppPurposePageNationalSignificantPossiblyCheckboxItemPosition5;
 
 
 
@@ -77,6 +100,22 @@ public class PowerAppRetentionPage extends BasePage {
         DriverContext.WaitForElementToBeClickable(PowerAppPurposePageNationalSignificantNo);
     }
 
+    public void ClickAlmostCertainlyRadioButtonNationalSignificance() throws InterruptedException {
+
+        Thread.sleep(1000);
+        //PowerAppPurposePageNationalSignificantNo.sendKeys(Keys.ENTER);
+        //DriverContext.WaitForElementNotGettingToBeClickable(PowerAppPurposePageNationalSignificantNo);
+        DriverContext.WaitForElementToBeClickable(PowerAppPurposePageNationalSignificantAlmostCertainly);
+    }
+
+    public void ClickPossiblyRadioButtonNationalSignificance() throws InterruptedException {
+
+        Thread.sleep(1000);
+        //PowerAppPurposePageNationalSignificantNo.sendKeys(Keys.ENTER);
+        //DriverContext.WaitForElementNotGettingToBeClickable(PowerAppPurposePageNationalSignificantNo);
+        DriverContext.WaitForElementToBeClickable(PowerAppPurposePageNationalSignificantPossibly);
+    }
+
     public void ClickNoRadioButtonExtendedValue() throws InterruptedException {
 
         Thread.sleep(1000);
@@ -96,5 +135,32 @@ public class PowerAppRetentionPage extends BasePage {
         DriverContext.WaitForElementToBeClickable(PowerAppPurposePageNextSection);
         DriverContext.WaitForPageToLoad();
         return GetInstance(PowerAppSecurityPage.class);
+    }
+
+    public void ITem1SelectedCheckboxBEISPrincipalPolicy(){
+
+        DriverContext.WaitForElementToBeClickable(PowerAppPurposePageNationalSignificantPossiblyCheckboxItemPosition1);
+    }
+
+    public void ITem2SelectedCheckboxDevelopmentOrImplementationOfLegislation(){
+
+        DriverContext.WaitForElementToBeClickable(PowerAppPurposePageNationalSignificantPossiblyCheckboxItemPosition2);
+    }
+
+    public void ITem3SelectedCheckboxOperationOfBEISStatutoryDuties(){
+
+        DriverContext.WaitForElementToBeClickable(PowerAppPurposePageNationalSignificantPossiblyCheckboxItemPosition3);
+    }
+
+    public void ITem4SelectedCheckboxHighLevelDecisionMaking(){
+
+        DriverContext.WaitForElementNotGettingToBeClickable(PowerAppPurposePageNationalSignificantPossiblyCheckboxItemPosition4);
+        DriverContext.WaitForElementToBeClickable(PowerAppPurposePageNationalSignificantPossiblyCheckboxItemPosition4);
+    }
+
+    public void ITem5SelectedCheckboxConstitutionalMatters(){
+
+        DriverContext.WaitForElementNotGettingToBeClickable(PowerAppPurposePageNationalSignificantPossiblyCheckboxItemPosition5);
+        DriverContext.WaitForElementToBeClickable(PowerAppPurposePageNationalSignificantPossiblyCheckboxItemPosition5);
     }
 }

@@ -147,7 +147,7 @@ public class IssueTaxonomyChangesStepdef extends Base {
         DriverContext.SwitchFrame(0);
         if(radioType.equalsIgnoreCase("BEIS")){
             CurrentPage.As(PowerAppActivityPage.class).ClickBEIS();
-        }else if(radioType.equalsIgnoreCase("")){
+        }else if(radioType.equalsIgnoreCase("Public Body / Agency")){
 
         }
 
